@@ -2,18 +2,14 @@
   "name": "kritische-literatuurstudie-notive",
   "private": true,
   "version": "0.1.0",
-  "homepage": "https://ThijsKraaijenbos.github.io/kritische-literatuurstudie-notive",
   "type": "module",
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
-    "gh-pages": "^6.3.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
   },
