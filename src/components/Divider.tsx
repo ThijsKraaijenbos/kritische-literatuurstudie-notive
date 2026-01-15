@@ -1,11 +1,11 @@
-interface DividerProps {
-  direction: "vertical" | "horizontal"
-}
+// import {cn} from "../utils/cn.ts";
 
-export const Divider = (props: DividerProps) => {
+// interface DividerProps {
+//   direction: "vertical" | "horizontal"
+// }
+
+export const Divider = () => {
   return (
-    <div className={"bg-red-400"}>
-      <p>TEST: {props.direction}</p>
-    </div>
+    <div className={"bg-(--gray) p-0.25 w-[80%] h-full"}/>
   )
 }

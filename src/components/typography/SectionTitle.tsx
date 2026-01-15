@@ -7,8 +7,8 @@ interface SectionTitleProps {
 
 export const SectionTitle = (props: SectionTitleProps) => {
   return (
-    <>
-      <p>{props.children}</p>
-    </>
+    <div className="h-full w-[70%] mx-auto px-8 py-2 bg-gradient-to-r from-(--dark-blue) to-(--light-blue) rounded-sm shadow-lg">
+      <h2>{props.children}</h2>
+    </div>
   )
 }
