@@ -1,16 +1,14 @@
 import type {ReactNode} from "react";
 
-interface CardProps {
-  background?: boolean
+interface SectionTitleProps {
   children?: ReactNode
 }
 
 
-export const Title = (props: CardProps) => {
+export const SectionTitle = (props: SectionTitleProps) => {
   return (
     <>
       <p>{props.children}</p>
-      <p>{props.background && "background is true"}</p>
     </>
   )
 }

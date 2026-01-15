@@ -1,14 +1,15 @@
 import type {ReactNode} from "react";
 
-interface SectionTitleProps {
+interface CardTitleProps {
   children?: ReactNode
 }
 
 
-export const SectionTitle = (props: SectionTitleProps) => {
+export const CardTitle = (props: CardTitleProps) => {
   return (
     <>
       <p>{props.children}</p>
+      <div className={"w-full bg-blue-300"}></div>
     </>
   )
 }
