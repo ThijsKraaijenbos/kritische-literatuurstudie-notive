@@ -1,16 +1,16 @@
 import type {ReactNode} from "react";
-import {CardTitle} from "./typography/CardTitle.tsx";
 
 interface BulletPointProps {
-  background?: boolean
   children?: ReactNode
 }
 
 
 export const BulletPoint = (props: BulletPointProps) => {
   return (
-    <article className={props.background ? "bg-blue-200" : ""}>
-      <CardTitle></CardTitle>
-    </article>
+    <div className="flex gap-4 items-start">
+      <span className="mt-[0.8ex] w-3 h-3 bg-[var(--light-blue)] shrink-0" />
+      <p className="leading-relaxed">{props.children}</p>
+    </div>
   )
 }
+

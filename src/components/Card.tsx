@@ -15,14 +15,15 @@ export const Card = (props: CardProps) => {
   return (
     <article
       className={
-      cn(props.className,
-        "border-2 p-6 flex flex-col gap-4 items-center",
+      cn("border-2 p-6 flex flex-col gap-4 items-center",
         props.background
           ? "bg-white border-(--gray) rounded-lg shadow-sm"
-          : "border-transparent")}
+          : "border-transparent",
+        props.className
+      )}
     >
       <CardTitle>{props.title}</CardTitle>
-      <p>{props.children}</p>
+      {props.children}
     </article>
   )
 }

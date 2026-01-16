@@ -17,7 +17,35 @@
     },
     "swot": {
       "title": "Swot analyse",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam blandit imperdiet massa in bibendum. Praesent sit amet feugiat odio. Maecenas nec pharetra ex, vitae sollicitudin sapien. Morbi vitae velit id lectus semper placerat. Donec quis orci non velit mattis elementum vel eu tortor. Nam nec urna ligula. Curabi,"
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam blandit imperdiet massa in bibendum. Praesent sit amet feugiat odio. Maecenas nec pharetra ex, vitae sollicitudin sapien. Morbi vitae velit id lectus semper placerat. Donec quis orci non velit mattis elementum vel eu tortor. Nam nec urna ligula. Curabi,",
+      "sterktes": {
+        "title": "Sterktes",
+        "1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam blandit imperdiet massa in bibendum. sit amet, consectetur adipiscing elit. sit amet, consectetur adipiscing elit. sit amet, consectetur adipiscing elit.",
+        "2": "Lorem ipsum dolor sit amet",
+        "3": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam blandit imperdiet massa in bibendum.",
+        "4": "str4"
+      },
+      "zwaktes": {
+        "title": "Zwaktes",
+        "1": "bla",
+        "2": "bla",
+        "3": "bla",
+        "4": "bla"
+      },
+      "kansen": {
+        "title": "Kansen",
+        "1": "bla",
+        "2": "bla",
+        "3": "bla",
+        "4": "bla"
+      },
+      "bedreigingen": {
+        "title": "Bedreigingen",
+        "1": "bla",
+        "2": "bla",
+        "3": "bla",
+        "4": "bla"
+      }
     },
     "confrontatiematrix": {
       "title": "Confrontatiematrix",

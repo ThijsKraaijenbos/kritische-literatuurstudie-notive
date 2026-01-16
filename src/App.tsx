@@ -1,15 +1,9 @@
 import {SectionTemplate} from "./components/SectionTemplate.tsx";
 import {Card} from "./components/Card.tsx";
-import {texts} from "./texts.json";
+import {t} from "./utils/t.ts";
+import {SwotAnalysis} from "./components/SwotAnalysis.tsx";
 
 function App() {
-  const t = (key: string): string => {
-    return key.split(".").reduce((obj: any, k) => {
-      return obj?.[k];
-    }, texts) ?? key;
-  };
-
-
   return (
     <>
       <header/>
@@ -22,7 +16,7 @@ function App() {
               title={t("probleemEnContext.context.title")}
               className="basis-1/3"
             >
-              {t("probleemEnContext.context.description")}
+              <p>{t("probleemEnContext.context.description")}</p>
             </Card>
 
             <Card
@@ -30,7 +24,7 @@ function App() {
               title={t("probleemEnContext.onderzoeksvraag.title")}
               className="basis-1/3"
             >
-              {t("probleemEnContext.onderzoeksvraag.description")}
+              <p>{t("probleemEnContext.onderzoeksvraag.description")}</p>
             </Card>
 
             <Card
@@ -38,7 +32,7 @@ function App() {
               title={t("probleemEnContext.standpunt.title")}
               className="basis-1/3"
             >
-              {t("probleemEnContext.standpunt.description")}
+              <p>{t("probleemEnContext.standpunt.description")}</p>
             </Card>
           </div>
         </SectionTemplate>
@@ -49,6 +43,8 @@ function App() {
           <p className="w-[60%]">
             {t("swot.description")}
           </p>
+
+          <SwotAnalysis/>
         </SectionTemplate>
 
         {/* Confrontatiematrix */}
