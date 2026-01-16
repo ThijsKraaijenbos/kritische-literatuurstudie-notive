@@ -20,31 +20,27 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam blandit imperdiet massa in bibendum. Praesent sit amet feugiat odio. Maecenas nec pharetra ex, vitae sollicitudin sapien. Morbi vitae velit id lectus semper placerat. Donec quis orci non velit mattis elementum vel eu tortor. Nam nec urna ligula. Curabi,",
       "sterktes": {
         "title": "Sterktes",
-        "1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam blandit imperdiet massa in bibendum. sit amet, consectetur adipiscing elit. sit amet, consectetur adipiscing elit. sit amet, consectetur adipiscing elit.",
-        "2": "Lorem ipsum dolor sit amet",
-        "3": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam blandit imperdiet massa in bibendum.",
-        "4": "str4"
+        "1": "Diverse kennisvlakken binnen het team. (technische kennis, sales/marketing, UX design, etc.)",
+        "2": "Klantgerichte aanpak & houding",
+        "3": "Positief imago bij klanten."
       },
       "zwaktes": {
         "title": "Zwaktes",
-        "1": "bla",
-        "2": "bla",
-        "3": "bla",
-        "4": "bla"
+        "1": "Er is geen duidelijk beleid binnen het bedrijf dat centraal over privacy & security gaat.",
+        "2": "Onvoldoende kennis binnen het gehele team over relevante privacythema's",
+        "3": "Geen interne medewerker die specificeerd in privacy engineering."
       },
       "kansen": {
         "title": "Kansen",
-        "1": "bla",
-        "2": "bla",
-        "3": "bla",
-        "4": "bla"
+        "1": "Post-quantum cryptografie",
+        "2": "Privacy by design",
+        "3": "Gebruik van externe tools"
       },
       "bedreigingen": {
         "title": "Bedreigingen",
-        "1": "bla",
-        "2": "bla",
-        "3": "bla",
-        "4": "bla"
+        "1": "Notive krijgt een slechte naam als de regels niet worden gevolgd",
+        "2": "Strenge regelgeving van de AVG",
+        "3": "Datalekken (en aansprakelijkheid daarbij)."
       }
     },
     "confrontatiematrix": {

@@ -9,6 +9,16 @@ html, body {
 @theme {
   --dark-blue: #4381AB;
   --light-blue: #6EC4FF;
+
+  --dark-green: #598342;
+  --light-green: #82cf6d;
+
+  --dark-orange: #b57627;
+  --light-orange: #fbac4d;
+
+  --dark-red: #b13939;
+  --light-red: #e86666;
+
   --gray: #F5F6FF;
   --text: #001D38;
 

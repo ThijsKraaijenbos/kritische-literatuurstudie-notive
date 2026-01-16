@@ -2,12 +2,20 @@ import type {ReactNode} from "react";
 import {CardTitle} from "./typography/CardTitle.tsx";
 import {cn} from "../utils/cn";
 
+export const TitleColor = {
+  "GREEN": "from-(--dark-green) to-(--light-green)",
+  "ORANGE": "from-(--dark-orange) to-(--light-orange)",
+  "RED": "from-(--dark-red) to-(--light-red)",
+} as const
+
+type TitleColorValue = typeof TitleColor[keyof typeof TitleColor];
 
 interface CardProps {
   background?: boolean
   children: ReactNode
   title: string
   className?: string
+  titleColor?: TitleColorValue
 }
 
 
@@ -22,7 +30,7 @@ export const Card = (props: CardProps) => {
         props.className
       )}
     >
-      <CardTitle>{props.title}</CardTitle>
+      <CardTitle className={props.titleColor}>{props.title}</CardTitle>
       {props.children}
     </article>
   )
