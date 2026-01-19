@@ -1,109 +1,286 @@
-import ReactFlow, {
-  type Node,
-  type Edge,
-  Handle,
-  Position,
-  useNodesState,
-  useEdgesState
-} from "reactflow";
-import "reactflow/dist/style.css";
-import { t } from "../utils/t.ts";
-import { cn } from "../utils/cn.ts";
+import {forwardRef, type ReactNode, useEffect, useRef, useState} from "react";
+import gsap from "gsap";
+import {ScrollTrigger} from "gsap/ScrollTrigger";
+import {cn} from "../utils/cn.ts";
+import {t} from "../utils/t.ts";
 
-// --- Types & Constants ---
+gsap.registerPlugin(ScrollTrigger);
+
+interface LadderStepProps {
+  children?: ReactNode
+  color: StepColor
+}
+
+interface LadderCardProps {
+  children?: ReactNode
+  col: number
+  color: StepColor
+}
+
 type StepColor = "green" | "teal" | "sky" | "indigo" | "rose";
 
-const stepColorClasses: Record<StepColor, string> = {
-  green: "bg-green-200",
-  teal: "bg-teal-200",
-  sky: "bg-sky-200",
-  indigo: "bg-indigo-200",
-  rose: "bg-rose-200",
+const stepColorClasses: Record<StepColor, {
+  stepBg: string
+  cardBg: string
+}> = {
+  green: {
+    stepBg: "bg-green-100",
+    cardBg: "bg-green-200",
+  },
+  teal: {
+    stepBg: "bg-teal-100",
+    cardBg: "bg-teal-200",
+  },
+  sky: {
+    stepBg: "bg-sky-100",
+    cardBg: "bg-sky-200",
+  },
+  indigo: {
+    stepBg: "bg-indigo-100",
+    cardBg: "bg-indigo-200",
+  },
+  rose: {
+    stepBg: "bg-rose-100",
+    cardBg: "bg-rose-200",
+  },
 };
 
-// --- Custom Node Component ---
-const LadderCardNode = ({ data }: { data: { label: string; color: StepColor; isTitle?: boolean } }) => {
+const LadderStep = (props: LadderStepProps) => {
   return (
-    <div className={cn(
-      "p-6 rounded-lg flex justify-center items-center text-center shadow-sm border border-black/5",
-      "w-[180px] h-[100px]", // Fixed dimensions for React Flow positioning
-      data.isTitle ? "text-2xl font-bold" : stepColorClasses[data.color]
-    )}>
-      {/* Handles act as the connection points for Xarrows style lines */}
-      <Handle type="target" position={Position.Top} className="opacity-0" />
-      <p className="m-0">{data.label}</p>
-      <Handle type="source" position={Position.Bottom} className="opacity-0" />
+    <div
+      className={cn(
+        "ladder-step h-full grid grid-cols-4 gap-8 p-4 rounded-lg",
+        stepColorClasses[props.color].stepBg
+      )}
+    >
+      {props.children}
     </div>
-  );
+  )
+}
+
+const LadderCard = forwardRef<HTMLDivElement, LadderCardProps>(
+  ({ children, col, color }, ref) => {
+    return (
+      <div
+        ref={ref}
+        className={cn(
+          col === 1 && "col-start-1",
+          col === 2 && "col-start-2",
+          col === 3 && "col-start-3",
+          col === 4 && "col-start-4",
+          col === 5 && "col-start-5",
+          "col-span-1 h-full w-full p-6 rounded-lg flex justify-center items-center text-center",
+          col === 1 ? "text-4xl" : stepColorClasses[color].cardBg
+        )}
+        style={{ position: 'relative', zIndex: 20 }}
+      >
+        <p>{children}</p>
+      </div>
+    );
+  }
+);
+
+const getConnectionPoint = (el: HTMLElement | null, anchor: 'top' | 'bottom') => {
+  if (!el) return { x: 0, y: 0 };
+  const rect = el.getBoundingClientRect();
+  const container = el.closest('.ladder-container');
+  const containerRect = container?.getBoundingClientRect();
+
+  const x = rect.left + rect.width / 2 - (containerRect?.left || 0);
+  const y = anchor === 'top'
+    ? rect.top - (containerRect?.top || 0)
+    : rect.bottom - (containerRect?.top || 0);
+
+  return { x, y };
 };
 
-const nodeTypes = {
-  ladderCard: LadderCardNode,
+const createRoundedSteppedPath = (
+  start: { x: number; y: number },
+  end: { x: number; y: number },
+  radius: number
+) => {
+  // If vertically aligned → straight line
+  if (Math.abs(start.x - end.x) < 1) {
+    return `M ${start.x} ${start.y} L ${end.x} ${end.y}`;
+  }
+
+  const midY = start.y + (end.y - start.y) * 0.5;
+  const dir = end.x > start.x ? 1 : -1;
+
+  // Clamp radius so it never overshoots
+  const maxRadius = Math.min(
+    radius,
+    Math.abs(end.x - start.x) / 2,
+    Math.abs(end.y - start.y) / 2
+  );
+
+  return `
+    M ${start.x} ${start.y}
+    L ${start.x} ${midY - maxRadius}
+
+    Q ${start.x} ${midY} ${start.x + maxRadius * dir} ${midY}
+
+    L ${end.x - maxRadius * dir} ${midY}
+
+    Q ${end.x} ${midY} ${end.x} ${midY + maxRadius}
+
+    L ${end.x} ${end.y}
+  `;
 };
+
+
 
 export const ImpactLadder = () => {
-  // 1. Define Nodes (Mapping your original structure)
-  const initialNodes: Node[] = [
-    // ROW 1 (Green)
-    { id: "title1", type: "ladderCard", position: { x: 0, y: 0 }, data: { label: t("impactladder.steps.1.title"), color: "green", isTitle: true } },
-    { id: "card1", type: "ladderCard", position: { x: 400, y: 0 }, data: { label: t("impactladder.steps.1.card1"), color: "green" } },
+  const [showConnections, setShowConnections] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const svgRef = useRef<SVGSVGElement>(null);
 
-    // ROW 2 (Teal)
-    { id: "title2", type: "ladderCard", position: { x: 0, y: 150 }, data: { label: t("impactladder.steps.2.title"), color: "teal", isTitle: true } },
-    { id: "card2", type: "ladderCard", position: { x: 200, y: 150 }, data: { label: t("impactladder.steps.2.card1"), color: "teal" } },
-    { id: "card3", type: "ladderCard", position: { x: 400, y: 150 }, data: { label: t("impactladder.steps.2.card2"), color: "teal" } },
+  const card1Ref = useRef<HTMLDivElement>(null);
+  const card2Ref = useRef<HTMLDivElement>(null);
+  const card3Ref = useRef<HTMLDivElement>(null);
+  const card4Ref = useRef<HTMLDivElement>(null);
+  const card5Ref = useRef<HTMLDivElement>(null);
+  const card6Ref = useRef<HTMLDivElement>(null);
+  const card7Ref = useRef<HTMLDivElement>(null);
+  const card8Ref = useRef<HTMLDivElement>(null);
 
-    // ROW 3 (Sky)
-    { id: "title3", type: "ladderCard", position: { x: 0, y: 300 }, data: { label: t("impactladder.steps.3.title"), color: "sky", isTitle: true } },
-    { id: "card4", type: "ladderCard", position: { x: 400, y: 300 }, data: { label: t("impactladder.steps.3.card1"), color: "sky" } },
-    { id: "card5", type: "ladderCard", position: { x: 600, y: 300 }, data: { label: t("impactladder.steps.3.card2"), color: "sky" } },
+  // Animate ladder steps
+  useEffect(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: containerRef.current,
+        start: "top 50%",
+        toggleActions: "play none none none",
+        once: true,
+      },
+      onComplete: () => setShowConnections(true),
+    });
 
-    // ROW 4 (Indigo)
-    { id: "title4", type: "ladderCard", position: { x: 0, y: 450 }, data: { label: t("impactladder.steps.4.title"), color: "indigo", isTitle: true } },
-    { id: "card6", type: "ladderCard", position: { x: 600, y: 450 }, data: { label: t("impactladder.steps.4.card1"), color: "indigo" } },
+    tl.fromTo(
+      ".ladder-step",
+      { opacity: 0, y: -10 },
+      { opacity: 1, y: 0, duration: 0.5, stagger: 0.2 }
+    );
+  }, []);
 
-    // ROW 5 (Rose)
-    { id: "title5", type: "ladderCard", position: { x: 0, y: 600 }, data: { label: t("impactladder.steps.5.title"), color: "rose", isTitle: true } },
-    { id: "card7", type: "ladderCard", position: { x: 400, y: 600 }, data: { label: t("impactladder.steps.5.card1"), color: "rose" } },
-    { id: "card8", type: "ladderCard", position: { x: 600, y: 600 }, data: { label: t("impactladder.steps.5.card2"), color: "rose" } },
-  ];
+  // Draw connections with GSAP
+  useEffect(() => {
+    if (!showConnections || !svgRef.current) return;
 
-  // 2. Define Edges (Your Xarrow connections)
-  const initialEdges: Edge[] = [
-    { id: "e1-2", source: "card1", target: "card2", type: "smoothstep" },
-    { id: "e1-3", source: "card1", target: "card3", type: "smoothstep" },
-    { id: "e2-4", source: "card2", target: "card4", type: "smoothstep" },
-    { id: "e3-4", source: "card3", target: "card4", type: "smoothstep" },
-    { id: "e3-5", source: "card3", target: "card5", type: "smoothstep" },
-    { id: "e4-6", source: "card4", target: "card6", type: "smoothstep" },
-    { id: "e5-6", source: "card5", target: "card6", type: "smoothstep" },
-    { id: "e4-7", source: "card4", target: "card7", type: "straight" },
-    { id: "e6-8", source: "card6", target: "card8", type: "straight" },
-  ].map(edge => ({
-    ...edge,
-    style: { stroke: "#4b5563", strokeWidth: 2 }, // Corresponds to var(--dark-gray)
-    animated: true, // Replaces your GSAP dash-offset logic
-  }));
+    const connections = [
+      { start: card1Ref, end: card2Ref, curveness: 1 },
+      { start: card1Ref, end: card3Ref, curveness: 1 },
+      { start: card2Ref, end: card4Ref, curveness: 1 },
+      { start: card3Ref, end: card4Ref, curveness: 1 },
+      { start: card3Ref, end: card5Ref, curveness: 1 },
+      { start: card4Ref, end: card6Ref, curveness: 1 },
+      { start: card5Ref, end: card6Ref, curveness: 1 },
+      { start: card4Ref, end: card7Ref, curveness: 1 },
+      { start: card6Ref, end: card8Ref, curveness: 1 },
+    ];
 
-  const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
-  const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
+    const paths: SVGPathElement[] = [];
+
+    connections.forEach(({ start, end }) => {
+      const startPos = getConnectionPoint(start.current, 'bottom');
+      const endPos = getConnectionPoint(end.current, 'top');
+      const radius = 16;
+
+      const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+      const d = createRoundedSteppedPath(startPos, endPos, radius);
+
+      path.setAttribute("d", d);
+      path.setAttribute("stroke", "#4a5568");
+      path.setAttribute("stroke-width", "2");
+      path.setAttribute("fill", "none");
+      path.setAttribute("stroke-linecap", "round");
+      path.setAttribute("stroke-linejoin", "round");
+
+
+      svgRef.current?.appendChild(path);
+      paths.push(path);
+    });
+
+    // Animate paths
+    paths.forEach((path) => {
+      const length = path.getTotalLength();
+      path.style.strokeDasharray = `${length}`;
+      path.style.strokeDashoffset = `${length}`;
+    });
+
+    gsap.to(paths, {
+      strokeDashoffset: 0,
+      duration: 0.8,
+      stagger: 0.15,
+      ease: "power1.inOut",
+    });
+
+    return () => {
+      paths.forEach(path => path.remove());
+    };
+  }, [showConnections]);
 
   return (
-    <div className="h-[800px] w-full border border-gray-100 rounded-xl overflow-hidden bg-white">
-      <ReactFlow
-        nodes={nodes}
-        edges={edges}
-        onNodesChange={onNodesChange}
-        onEdgesChange={onEdgesChange}
-        nodeTypes={nodeTypes}
-        // Disable interactions to keep it as an "Infographic"
-        nodesDraggable={false}
-        nodesConnectable={false}
-        elementsSelectable={false}
-        zoomOnScroll={false}
-        panOnDrag={false}
-        fitView
+    <div className="ladder-container relative grid grid-rows-5 gap-8 h-full w-[80%]" ref={containerRef}>
+      <svg
+        ref={svgRef}
+        className="absolute inset-0 w-full h-full pointer-events-none"
+        style={{ zIndex: 1 }}
       />
+
+      <LadderStep color="green">
+        <LadderCard col={1} color="green">
+          {t("impactladder.steps.1.title")}
+        </LadderCard>
+        <LadderCard col={3} color="green" ref={card1Ref}>
+          {t("impactladder.steps.1.card1")}
+        </LadderCard>
+      </LadderStep>
+
+      <LadderStep color="teal">
+        <LadderCard col={1} color="teal">
+          {t("impactladder.steps.2.title")}
+        </LadderCard>
+        <LadderCard col={2} color="teal" ref={card2Ref}>
+          {t("impactladder.steps.2.card1")}
+        </LadderCard>
+        <LadderCard col={3} color="teal" ref={card3Ref}>
+          {t("impactladder.steps.2.card2")}
+        </LadderCard>
+      </LadderStep>
+
+      <LadderStep color="sky">
+        <LadderCard col={1} color="sky">
+          {t("impactladder.steps.3.title")}
+        </LadderCard>
+        <LadderCard col={3} color="sky" ref={card4Ref}>
+          {t("impactladder.steps.3.card1")}
+        </LadderCard>
+        <LadderCard col={4} color="sky" ref={card5Ref}>
+          {t("impactladder.steps.3.card2")}
+        </LadderCard>
+      </LadderStep>
+
+      <LadderStep color="indigo">
+        <LadderCard col={1} color="indigo">
+          {t("impactladder.steps.4.title")}
+        </LadderCard>
+        <LadderCard col={4} color="indigo" ref={card6Ref}>
+          {t("impactladder.steps.4.card1")}
+        </LadderCard>
+      </LadderStep>
+
+      <LadderStep color="rose">
+        <LadderCard col={1} color="rose">
+          {t("impactladder.steps.5.title")}
+        </LadderCard>
+        <LadderCard col={3} color="rose" ref={card7Ref}>
+          {t("impactladder.steps.5.card1")}
+        </LadderCard>
+        <LadderCard col={4} color="rose" ref={card8Ref}>
+          {t("impactladder.steps.5.card2")}
+        </LadderCard>
+      </LadderStep>
     </div>
   );
 };
