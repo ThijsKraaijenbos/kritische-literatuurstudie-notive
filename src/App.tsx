@@ -2,12 +2,13 @@ import {SectionTemplate} from "./components/SectionTemplate.tsx";
 import {Card} from "./components/Card.tsx";
 import {t} from "./utils/t.ts";
 import {SwotAnalysis} from "./components/SwotAnalysis.tsx";
+import ConfrontationMatrix from "./components/ConfrontationMatrix.tsx";
 
 function App() {
   return (
     <>
       <header/>
-      <main className="flex flex-col justify-center items-center gap-x-8 gap-y-24 mx-auto max-w-[70%] 2xl:max-w-[60%] xl:max-w-[80%]">
+      <main className="flex flex-col justify-center items-center gap-x-8 gap-y-24 mx-auto max-w-[75%] 2xl:max-w-[70%] xl:max-w-[80%]">
         {/* Probleem En Context */}
         <SectionTemplate title={t('probleemEnContext.title')}>
           <div className="gap-x-8 flex flex-row justify-center">
@@ -53,6 +54,7 @@ function App() {
           <p className="w-[60%]">
             {t("confrontatiematrix.description")}
           </p>
+            <ConfrontationMatrix/>
         </SectionTemplate>
 
         {/* Impactladder */}

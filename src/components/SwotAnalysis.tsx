@@ -4,7 +4,7 @@ import {BulletPoint} from "./BulletPoint.tsx";
 
 export const SwotAnalysis = () => {
   return (
-    <div className="grid grid-cols-2 grid-rows-2 border-(--gray) border-3 mx-auto aspect-square w-[50%] shadow-lg rounded-lg">
+    <div className="grid grid-cols-2 grid-rows-2 border-(--gray) border-3 mx-auto w-[70%] shadow-lg rounded-lg">
       <Card title={t("swot.sterktes.title")} className={"border-(--gray) border-2 w-full h-full"} titleColor={TitleColor.GREEN}>
         <span className="flex flex-col gap-4">
           <BulletPoint>{t("swot.sterktes.1")}</BulletPoint>

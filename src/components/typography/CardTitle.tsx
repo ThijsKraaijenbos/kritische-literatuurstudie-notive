@@ -10,7 +10,7 @@ interface CardTitleProps {
 export const CardTitle = (props: CardTitleProps) => {
   return (
     <span className={"flex flex-col gap-1"}>
-      <h3 className={cn("bg-gradient-to-r from-(--dark-blue) to-(--light-blue) !text-transparent bg-clip-text", props.className)}>{props.children}</h3>
+      <h3 className={cn("bg-gradient-to-r from-(--dark-blue) to-(--light-blue) !text-transparent bg-clip-text hyphens-auto", props.className)}>{props.children}</h3>
       <div className={cn("w-full bg-gradient-to-r from-(--dark-blue) to-(--light-blue) p-0.25", props.className )}></div>
     </span>
   )

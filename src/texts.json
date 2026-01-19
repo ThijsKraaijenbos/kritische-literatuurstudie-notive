@@ -45,7 +45,31 @@
     },
     "confrontatiematrix": {
       "title": "Confrontatiematrix",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam blandit imperdiet massa in bibendum. Praesent sit amet feugiat odio. Maecenas nec pharetra ex, vitae sollicitudin sapien. Morbi vitae velit id lectus semper placerat. Donec quis orci non velit mattis elementum vel eu tortor. Nam nec urna ligula. Curabi,"
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam blandit imperdiet massa in bibendum. Praesent sit amet feugiat odio. Maecenas nec pharetra ex, vitae sollicitudin sapien. Morbi vitae velit id lectus semper placerat. Donec quis orci non velit mattis elementum vel eu tortor. Nam nec urna ligula. Curabi,",
+      "sterktes": {
+        "title": "Sterktes",
+        "1": "Diverse kennisvlakken",
+        "2": "Klantgericht",
+        "3": "Positief imago"
+      },
+      "zwaktes": {
+        "title": "Zwaktes",
+        "1": "Geen duidelijk privacybeleid",
+        "2": "Onvoldoende kennis binnen over relevante privacythema's",
+        "3": "Geen interne specialist"
+      },
+      "kansen": {
+        "title": "Kansen",
+        "1": "Post-quantum cryptografie",
+        "2": "Privacy by design",
+        "3": "Gebruik van externe tools"
+      },
+      "bedreigingen": {
+        "title": "Bedreigingen",
+        "1": "Slechte naam als de regels niet worden gevolgd",
+        "2": "Strenge regelgeving van de AVG",
+        "3": "Datalekken (en aansprakelijkheid daarbij)."
+      }
     },
     "impactladder": {
       "title": "Impactladder",
