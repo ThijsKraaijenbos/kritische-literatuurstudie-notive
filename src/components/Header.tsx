@@ -14,6 +14,10 @@ export const Header = () => {
           <h1 className={"text-center"}>{t("mainTitle")}</h1>
           <h2 className={"text-center !text-2xl"}>{t("mainSubtitle")}</h2>
         </div>
+        <div className={"absolute bottom-2 left-4"}>
+          <p className={"text-start !text-white !font-bold !font-open-sans"}>{t("headerDetails")}</p>
+          <p className={"text-start !text-white !font-bold !font-open-sans"}>{t("date")}</p>
+        </div>
       </header>
 
       {/* Divider overlapping the header */}
