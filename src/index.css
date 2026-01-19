@@ -40,6 +40,14 @@ p {
   color: var(--text);
 }
 
+h1 {
+  font-size: 52px;
+  font-family: var(--font-open-sans), sans-serif;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+
 h2 {
   font-size: 48px;
   font-family: var(--font-open-sans), sans-serif;

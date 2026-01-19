@@ -149,7 +149,7 @@ export const ImpactLadder = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: containerRef.current,
-        start: "top 50%",
+        start: "top 40%",
         toggleActions: "play none none none",
         once: true,
       },
@@ -167,7 +167,7 @@ export const ImpactLadder = () => {
   useEffect(() => {
     if (!showConnections || !svgRef.current) return;
 
-    const drawPaths = () => {
+    const drawPaths = (instant?: boolean) => {
       // Remove any existing paths
       svgRef.current!.innerHTML = "";
 
@@ -213,8 +213,8 @@ export const ImpactLadder = () => {
 
       gsap.to(paths, {
         strokeDashoffset: 0,
-        duration: 0.8,
-        stagger: 0.15,
+        duration: instant ? 0 : 0.8,
+        stagger: instant ? 0 : 0.25,
         ease: "power1.inOut",
       });
     };
@@ -222,7 +222,7 @@ export const ImpactLadder = () => {
     drawPaths(); // initial draw
 
     const handleResize = () => {
-      drawPaths();
+      drawPaths(true);
     };
 
     window.addEventListener("resize", handleResize);

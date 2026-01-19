@@ -4,11 +4,12 @@ import {SwotAnalysis} from "./components/SwotAnalysis.tsx";
 import ConfrontationMatrix from "./components/ConfrontationMatrix.tsx";
 import ProblemAndContext from "./components/ProblemAndContext.tsx";
 import {ImpactLadder} from "./components/ImpactLadder.tsx";
+import {Header} from "./components/Header.tsx";
 
 function App() {
   return (
-    <>
-      <header/>
+    <div className={"gap-y-24 flex flex-col"}>
+      <Header></Header>
       <main className="flex flex-col justify-center items-center gap-x-8 gap-y-24 mx-auto max-w-[75%] 2xl:max-w-[70%] xl:max-w-[80%]">
         {/* Probleem En Context */}
         <SectionTemplate
@@ -44,7 +45,7 @@ function App() {
           <ImpactLadder/>
         </SectionTemplate>
       </main>
-    </>
+    </div>
   );
 }
 

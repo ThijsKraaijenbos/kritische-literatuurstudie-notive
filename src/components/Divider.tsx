@@ -1,11 +1,14 @@
 // import {cn} from "../utils/cn.ts";
 
-// interface DividerProps {
-//   direction: "vertical" | "horizontal"
-// }
+import {cn} from "../utils/cn.ts";
 
-export const Divider = () => {
+interface DividerProps {
+  // direction: "vertical" | "horizontal"
+  className?: string
+}
+
+export const Divider = (props: DividerProps) => {
   return (
-    <div className={"bg-(--gray) p-0.25 w-[80%] h-full"}/>
+    <div className={cn("bg-(--gray) p-0.25 w-[80%] h-full", props.className)}/>
   )
 }
