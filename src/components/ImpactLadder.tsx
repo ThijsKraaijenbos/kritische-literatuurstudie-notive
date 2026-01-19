@@ -167,61 +167,74 @@ export const ImpactLadder = () => {
   useEffect(() => {
     if (!showConnections || !svgRef.current) return;
 
-    const connections = [
-      { start: card1Ref, end: card2Ref, curveness: 1 },
-      { start: card1Ref, end: card3Ref, curveness: 1 },
-      { start: card2Ref, end: card4Ref, curveness: 1 },
-      { start: card3Ref, end: card4Ref, curveness: 1 },
-      { start: card3Ref, end: card5Ref, curveness: 1 },
-      { start: card4Ref, end: card6Ref, curveness: 1 },
-      { start: card5Ref, end: card6Ref, curveness: 1 },
-      { start: card4Ref, end: card7Ref, curveness: 1 },
-      { start: card6Ref, end: card8Ref, curveness: 1 },
-    ];
+    const drawPaths = () => {
+      // Remove any existing paths
+      svgRef.current!.innerHTML = "";
 
-    const paths: SVGPathElement[] = [];
+      const connections = [
+        { start: card1Ref, end: card2Ref },
+        { start: card1Ref, end: card3Ref },
+        { start: card2Ref, end: card4Ref },
+        { start: card3Ref, end: card4Ref },
+        { start: card3Ref, end: card5Ref },
+        { start: card4Ref, end: card6Ref },
+        { start: card5Ref, end: card6Ref },
+        { start: card4Ref, end: card7Ref },
+        { start: card6Ref, end: card8Ref },
+      ];
 
-    connections.forEach(({ start, end }) => {
-      const startPos = getConnectionPoint(start.current, 'bottom');
-      const endPos = getConnectionPoint(end.current, 'top');
-      const radius = 16;
+      const paths: SVGPathElement[] = [];
 
-      const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
-      const d = createRoundedSteppedPath(startPos, endPos, radius);
+      connections.forEach(({ start, end }) => {
+        const startPos = getConnectionPoint(start.current, 'bottom');
+        const endPos = getConnectionPoint(end.current, 'top');
+        const radius = 16;
 
-      path.setAttribute("d", d);
-      path.setAttribute("stroke", "#4a5568");
-      path.setAttribute("stroke-width", "2");
-      path.setAttribute("fill", "none");
-      path.setAttribute("stroke-linecap", "round");
-      path.setAttribute("stroke-linejoin", "round");
+        const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+        const d = createRoundedSteppedPath(startPos, endPos, radius);
 
+        path.setAttribute("d", d);
+        path.setAttribute("stroke", "#4a5568");
+        path.setAttribute("stroke-width", "2");
+        path.setAttribute("fill", "none");
+        path.setAttribute("stroke-linecap", "round");
+        path.setAttribute("stroke-linejoin", "round");
 
-      svgRef.current?.appendChild(path);
-      paths.push(path);
-    });
+        svgRef.current!.appendChild(path);
+        paths.push(path);
+      });
 
-    // Animate paths
-    paths.forEach((path) => {
-      const length = path.getTotalLength();
-      path.style.strokeDasharray = `${length}`;
-      path.style.strokeDashoffset = `${length}`;
-    });
+      // Animate paths
+      paths.forEach((path) => {
+        const length = path.getTotalLength();
+        path.style.strokeDasharray = `${length}`;
+        path.style.strokeDashoffset = `${length}`;
+      });
 
-    gsap.to(paths, {
-      strokeDashoffset: 0,
-      duration: 0.8,
-      stagger: 0.15,
-      ease: "power1.inOut",
-    });
+      gsap.to(paths, {
+        strokeDashoffset: 0,
+        duration: 0.8,
+        stagger: 0.15,
+        ease: "power1.inOut",
+      });
+    };
+
+    drawPaths(); // initial draw
+
+    const handleResize = () => {
+      drawPaths();
+    };
+
+    window.addEventListener("resize", handleResize);
 
     return () => {
-      paths.forEach(path => path.remove());
+      window.removeEventListener("resize", handleResize);
+      svgRef.current!.innerHTML = ""; // cleanup
     };
   }, [showConnections]);
 
   return (
-    <div className="ladder-container relative grid grid-rows-5 gap-8 h-full w-[80%]" ref={containerRef}>
+    <div className="ladder-container relative grid grid-rows-5 gap-8 h-full w-[100%] 4xl:w-[80%]" ref={containerRef}>
       <svg
         ref={svgRef}
         className="absolute inset-0 w-full h-full pointer-events-none"
