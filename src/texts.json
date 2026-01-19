@@ -104,6 +104,21 @@
           "card2": "Onvoldoende kennis over privacythema's en AVG regelgeving."
         }
       }
+    },
+    "onderbouwing": {
+      "title": "Onderbouwing",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam blandit imperdiet massa in bibendum. Praesent sit amet feugiat odio. Maecenas nec pharetra ex, vitae sollicitudin sapien. Morbi vitae velit id lectus semper placerat. Donec quis orci non velit mattis elementum vel eu tortor. Nam nec urna ligula. Curabi,"
+    },
+    "conclusie": {
+      "title": "Conclusie",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam blandit imperdiet massa in bibendum. Praesent sit amet feugiat odio. Maecenas nec pharetra ex, vitae sollicitudin sapien. Morbi vitae velit id lectus semper placerat. Donec quis orci non velit mattis elementum vel eu tortor. Nam nec urna ligula. Curabi,"
+    },
+    "bronnenlijst": {
+      "title": "Bronnenlijst",
+      "1": "bron1",
+      "2": "bron2",
+      "3": "bron3",
+      "4": "bron4"
     }
   }
 }

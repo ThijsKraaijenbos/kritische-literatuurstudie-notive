@@ -44,6 +44,29 @@ function App() {
           </p>
           <ImpactLadder/>
         </SectionTemplate>
+
+        {/* Onderbouwing */}
+        <SectionTemplate
+          title={t("onderbouwing.title")}>
+          <p className="w-[60%]">
+            {t("impactladder.description")}
+          </p>
+        </SectionTemplate>
+
+        {/* Conclusie */}
+        <SectionTemplate
+          title={t("conclusie.title")}>
+          <p className="w-[60%]">
+            {t("impactladder.description")}
+          </p>
+        </SectionTemplate>
+
+        <SectionTemplate
+          title={t("bronnenlijst.title")}>
+          <p className="w-[60%]">
+            {t("impactladder.description")}
+          </p>
+        </SectionTemplate>
       </main>
     </div>
   );

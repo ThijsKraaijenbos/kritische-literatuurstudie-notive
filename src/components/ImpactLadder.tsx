@@ -194,7 +194,7 @@ export const ImpactLadder = () => {
         const d = createRoundedSteppedPath(startPos, endPos, radius);
 
         path.setAttribute("d", d);
-        path.setAttribute("stroke", "#4a5568");
+        path.setAttribute("stroke", "#9b9ba1");
         path.setAttribute("stroke-width", "2");
         path.setAttribute("fill", "none");
         path.setAttribute("stroke-linecap", "round");
