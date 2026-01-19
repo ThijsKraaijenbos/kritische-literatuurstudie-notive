@@ -7,7 +7,15 @@ import {useEffect} from "react";
 gsap.registerPlugin(ScrollTrigger);
 export default function ProblemAndContext() {
   useEffect(() => {
-    gsap.fromTo(
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".animated-card",
+        start: "top 50%",
+        toggleActions: "play none none none",
+        once: true,
+      }
+    })
+    tl.fromTo(
       ".animated-card",
       {
         opacity: 0,

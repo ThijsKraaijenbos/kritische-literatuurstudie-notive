@@ -1,7 +1,39 @@
 import { Divider } from "./Divider.tsx";
 import {t} from "../utils/t.ts";
+import {useEffect} from "react";
+import gsap from "gsap";
 
 export const Header = () => {
+  useEffect(() => {
+    const tl = gsap.timeline()
+    tl.fromTo(
+      ".anim-text",
+      {
+        opacity: 0,
+        y: -20, },
+      {
+        duration: 0.8,
+        opacity: 1,
+        y: 0,
+        stagger: 0.6,
+        ease: "back.out(1.5)",
+      }
+    );
+    tl.fromTo(
+      ".anim-text-left",
+      {
+        opacity: 0,
+        x: -5, },
+      {
+        duration: 0.5,
+        opacity: 1,
+        x: 0,
+        stagger: 0.5,
+        ease: "back.out(1.5)",
+      }
+    )
+  })
+
   return (
     <div className="relative">
       <header className="flex flex-col justify-center items-center gap-y-4 w-full -mt-4 h-80 relative z-0">
@@ -11,12 +43,12 @@ export const Header = () => {
           className="w-full h-full object-cover brightness-95"
         />
         <div className={"absolute"}>
-          <h1 className={"text-center"}>{t("mainTitle")}</h1>
-          <h2 className={"text-center !text-2xl"}>{t("mainSubtitle")}</h2>
+          <h1 className={"text-center anim-text"}>{t("mainTitle")}</h1>
+          <h2 className={"text-center !text-2xl anim-text"}>{t("mainSubtitle")}</h2>
         </div>
         <div className={"absolute bottom-2 left-4"}>
-          <p className={"text-start !text-white !font-bold !font-open-sans"}>{t("headerDetails")}</p>
-          <p className={"text-start !text-white !font-bold !font-open-sans"}>{t("date")}</p>
+          <p className={"text-start !text-white !font-bold !font-open-sans anim-text-left"}>{t("headerDetails")}</p>
+          <p className={"text-start !text-white !font-bold !font-open-sans anim-text-left"}>{t("date")}</p>
         </div>
       </header>
 
