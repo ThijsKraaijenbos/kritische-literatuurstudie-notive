@@ -35,7 +35,7 @@ export const SwotAnalysis = () => {
         },
         {
           opacity: 1,
-          duration: 0.2,
+          duration: 0.4,
         }
       )
       tl.fromTo(".animated-title div",
@@ -46,8 +46,8 @@ export const SwotAnalysis = () => {
         {
           opacity: 1,
           width: "100%",
-          duration: 0.6,
-          ease: "power1.inOut"
+          duration: 0.8,
+          ease: "power4.inOut"
         }
       )
 

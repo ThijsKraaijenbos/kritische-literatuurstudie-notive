@@ -3,6 +3,7 @@ import {t} from "./utils/t.ts";
 import {SwotAnalysis} from "./components/SwotAnalysis.tsx";
 import ConfrontationMatrix from "./components/ConfrontationMatrix.tsx";
 import ProblemAndContext from "./components/ProblemAndContext.tsx";
+import {ImpactLadder} from "./components/ImpactLadder.tsx";
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
           <p className="w-[60%]">
             {t("impactladder.description")}
           </p>
+          <ImpactLadder/>
         </SectionTemplate>
       </main>
     </>

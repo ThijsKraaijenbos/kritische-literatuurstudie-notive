@@ -74,7 +74,32 @@
     },
     "impactladder": {
       "title": "Impactladder",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam blandit imperdiet massa in bibendum. Praesent sit amet feugiat odio. Maecenas nec pharetra ex, vitae sollicitudin sapien. Morbi vitae velit id lectus semper placerat. Donec quis orci non velit mattis elementum vel eu tortor. Nam nec urna ligula. Curabi,"
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam blandit imperdiet massa in bibendum. Praesent sit amet feugiat odio. Maecenas nec pharetra ex, vitae sollicitudin sapien. Morbi vitae velit id lectus semper placerat. Donec quis orci non velit mattis elementum vel eu tortor. Nam nec urna ligula. Curabi,",
+      "steps": {
+        "1": {
+          "title": "Impact",
+          "card1": "Consistent conform de avg regelgeving werken."
+        },
+        "2": {
+          "title": "Actief gebruik",
+          "card1": "Privacy by design principe wordt geintegreerd in de werkwijze",
+          "card2": "Gebruik gaan maken van tools en methodes zoals data discovery tools, DPIA tools, consent management tools, encryption tools, etc."
+        },
+        "3": {
+          "title": "Implementatie",
+          "card1": "Duidelijk privacybeleid opstellen (verantwoordelijkheid van SecOps & Management).",
+          "card2": "Maandelijks presentaties geven over privacy- en security onderwerpen."
+        },
+        "4": {
+          "title": "Kennis verbreden",
+          "card1": "Kennis verbreden over verschillende tools en methodes."
+        },
+        "5": {
+          "title": "Probleem",
+          "card1": "Nog geen duidelijk privacy- en securitybeleid.",
+          "card2": "Onvoldoende kennis over privacythema's en AVG regelgeving."
+        }
+      }
     }
   }
 }
