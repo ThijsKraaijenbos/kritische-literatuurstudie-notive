@@ -1,7 +1,6 @@
-import type {ReactNode} from "react";
+import {type ReactNode} from "react";
 import {CardTitle} from "./typography/CardTitle.tsx";
 import {cn} from "../utils/cn";
-
 export const TitleColor = {
   "GREEN": "from-(--dark-green) to-(--light-green)",
   "ORANGE": "from-(--dark-orange) to-(--light-orange)",
@@ -16,6 +15,7 @@ interface CardProps {
   title: string
   className?: string
   titleColor?: TitleColorValue
+  animatedTitle?: boolean
 }
 
 
@@ -30,7 +30,7 @@ export const Card = (props: CardProps) => {
         props.className
       )}
     >
-      <CardTitle className={props.titleColor}>{props.title}</CardTitle>
+      <CardTitle className={cn(props.titleColor)} animatedTitle={props.animatedTitle}>{props.title}</CardTitle>
       {props.children}
     </article>
   )

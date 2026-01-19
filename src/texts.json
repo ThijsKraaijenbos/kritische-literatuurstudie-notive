@@ -45,6 +45,7 @@
     },
     "confrontatiematrix": {
       "title": "Confrontatiematrix",
+      "total": "Totaal:",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam blandit imperdiet massa in bibendum. Praesent sit amet feugiat odio. Maecenas nec pharetra ex, vitae sollicitudin sapien. Morbi vitae velit id lectus semper placerat. Donec quis orci non velit mattis elementum vel eu tortor. Nam nec urna ligula. Curabi,",
       "sterktes": {
         "title": "Sterktes",

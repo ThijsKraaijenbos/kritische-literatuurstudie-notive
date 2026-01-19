@@ -1,6 +1,6 @@
 import {SectionTitle} from "./typography/SectionTitle.tsx";
 import {Divider} from "./Divider.tsx";
-import type {ReactNode} from "react";
+import {type ReactNode} from "react";
 
 interface SectionTemplateProps {
   children?: ReactNode

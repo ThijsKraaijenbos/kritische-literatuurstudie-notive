@@ -1,8 +1,8 @@
 import {SectionTemplate} from "./components/SectionTemplate.tsx";
-import {Card} from "./components/Card.tsx";
 import {t} from "./utils/t.ts";
 import {SwotAnalysis} from "./components/SwotAnalysis.tsx";
 import ConfrontationMatrix from "./components/ConfrontationMatrix.tsx";
+import ProblemAndContext from "./components/ProblemAndContext.tsx";
 
 function App() {
   return (
@@ -10,32 +10,9 @@ function App() {
       <header/>
       <main className="flex flex-col justify-center items-center gap-x-8 gap-y-24 mx-auto max-w-[75%] 2xl:max-w-[70%] xl:max-w-[80%]">
         {/* Probleem En Context */}
-        <SectionTemplate title={t('probleemEnContext.title')}>
-          <div className="gap-x-8 flex flex-row justify-center">
-            <Card
-              background={true}
-              title={t("probleemEnContext.context.title")}
-              className="basis-1/3"
-            >
-              <p>{t("probleemEnContext.context.description")}</p>
-            </Card>
-
-            <Card
-              background={true}
-              title={t("probleemEnContext.onderzoeksvraag.title")}
-              className="basis-1/3"
-            >
-              <p>{t("probleemEnContext.onderzoeksvraag.description")}</p>
-            </Card>
-
-            <Card
-              background={true}
-              title={t("probleemEnContext.standpunt.title")}
-              className="basis-1/3"
-            >
-              <p>{t("probleemEnContext.standpunt.description")}</p>
-            </Card>
-          </div>
+        <SectionTemplate
+          title={t('probleemEnContext.title')}>
+          <ProblemAndContext/>
         </SectionTemplate>
 
         {/* SWOT analyse */}
