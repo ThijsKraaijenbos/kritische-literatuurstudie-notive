@@ -44,7 +44,7 @@ export const Conclusion = () => {
         background={true}
         title={t("conclusie.recommendation.title")}
         className="basis-1/2 animated-card"
-        ref={card2Ref}
+        ref={card1Ref}
       >
         <span>
           <BulletPoint>{t("conclusie.recommendation.1")}</BulletPoint>
@@ -57,7 +57,7 @@ export const Conclusion = () => {
         background={true}
         title={t("conclusie.summary.title")}
         className="basis-1/2 animated-card"
-        ref={card1Ref}
+        ref={card2Ref}
       >
         <p>{t("conclusie.summary.text1")}</p>
         <p>{t("conclusie.summary.text2")}</p>
