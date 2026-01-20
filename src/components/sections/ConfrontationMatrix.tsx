@@ -112,7 +112,7 @@ export default function ConfrontatieMatrix() {
   }, []);
 
   return (
-    <div className="grid grid-cols-9 grid-rows-9 mx-auto w-[100%] 4xl:w-[80%] 3xl:w-[85%] shadow-lg rounded-lg border-(--gray) border-3" ref={containerRef}>
+    <div className="grid grid-cols-9 grid-rows-9 mx-auto w-[100%] 4xl:w-[80%] 3xl:w-[100%] shadow-lg rounded-lg border-(--gray) border-3" ref={containerRef}>
       {/*swot labels - top row: kansen & bedreigingen*/}
       <div className="col-start-3 col-end-6 row-start-1 border-(--gray) border-r-2">
         <Cell value={"confrontatiematrix.kansen.title"} type={"label"}/>
