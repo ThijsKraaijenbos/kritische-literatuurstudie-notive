@@ -3,7 +3,6 @@
 import {cn} from "../utils/cn.ts";
 
 interface DividerProps {
-  // direction: "vertical" | "horizontal"
   className?: string
 }
 

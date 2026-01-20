@@ -1,7 +1,7 @@
 {
   "texts": {
     "mainTitle": "PRIVACY EN SECURITY ALS STANDAARD",
-    "mainSubtitle": "Hoe Notive gegevens veilig en consistent kan verwerken",
+    "mainSubtitle": "Hoe Notive veilig en consistent met gevoelige gegevens om kan gaan",
     "headerDetails": "Thijs Kraaijenbos",
     "date": "20-01-2026",
     "probleemEnContext": {
@@ -12,11 +12,11 @@
       },
       "onderzoeksvraag": {
         "title": "Onderzoeks\u00ADvraag",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam blandit imperdiet massa in bibendum. Praesent sit amet feugiat odio. Maecenas nec pharetra ex, vitae sollicitudin sapien. Morbi vitae velit id lectus semper placerat. Donec quis orci non velit mattis elementum vel eu tortor. Nam nec urna ligula. Curabi,"
+        "description": "Welke processen, tools en beleidsmaatregelen moet Notive implementeren om consistent gevoelige gegevens conform de AVG te verwerken?"
       },
       "standpunt": {
         "title": "Standpunt",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam blandit imperdiet massa in bibendum. Praesent sit amet feugiat odio. Maecenas nec pharetra ex, vitae sollicitudin sapien. Morbi vitae velit id lectus semper placerat. Donec quis orci non velit mattis elementum vel eu tortor. Nam nec urna ligula. Curabi,"
+        "description": "Notive moet een duidelijk en transparant privacy- en securitybeleid opstellen en hier in combinatie met externe tools gebruik van maken om consistent gegevens conform de AVG te verwerken."
       }
     },
     "swot": {
@@ -105,20 +105,117 @@
         }
       }
     },
+
     "onderbouwing": {
       "title": "Onderbouwing",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam blandit imperdiet massa in bibendum. Praesent sit amet feugiat odio. Maecenas nec pharetra ex, vitae sollicitudin sapien. Morbi vitae velit id lectus semper placerat. Donec quis orci non velit mattis elementum vel eu tortor. Nam nec urna ligula. Curabi,"
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam blandit imperdiet massa in bibendum. Praesent sit amet feugiat odio. Maecenas nec pharetra ex, vitae sollicitudin sapien. Morbi vitae velit id lectus semper placerat. Donec quis orci non velit mattis elementum vel eu tortor. Nam nec urna ligula. Curabi,",
+      "privacyBeleid": {
+        "title": "Privacy beleid",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam blandit imperdiet massa in bibendum. Praesent sit amet feugiat odio. Maecenas nec pharetra ex, vitae sollicitudin sapien. Morbi vitae velit id lectus semper placerat. Donec quis orci non velit mattis elementum vel eu tortor. Nam nec urna ligula. Curabi,",
+
+        "1": {
+          "title": "AVG regelgeving is streng",
+          "text": "lorem"
+        },
+        "2": {
+          "title": "Maakt het duidelijk wat de beleidsmaatregelen zijn",
+          "text": "lorem",
+          "1": {
+            "title": "Blijf transparant",
+            "text": "lorem"
+          },
+          "2": {
+            "title": "Maakt het duidelijk welke tools en methodes we gebruiken",
+            "text": "lorem"
+          }
+        }
+      },
+      "pbd": {
+        "title": "Privacy by design",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam blandit imperdiet massa in bibendum. Praesent sit amet feugiat odio. Maecenas nec pharetra ex, vitae sollicitudin sapien. Morbi vitae velit id lectus semper placerat. Donec quis orci non velit mattis elementum vel eu tortor. Nam nec urna ligula. Curabi,",
+        "1": {
+          "title": "Als je vanaf het begin van het proces privacy by design integreert in de werkwijze voorkom je problemen",
+          "text": "lorem",
+          "1": {
+            "title": "Zoals eerder genoemd bij subargument 1 van argument 1 is de AVG regelgeving streng / wettelijke verplichting.",
+            "text": "w"
+          }
+        },
+        "2": {
+          "title": "Tegenargument: Veel developers vinden het moeilijk om privacy by design effectief toe te passen."
+        },
+        "3": {
+          "title": "Externe tools en methodes moeten worden ingezet",
+          "text": "lorem",
+          "1": {
+            "title": "Er zijn verschillende tools en methodes ontworpen specifiek om privacy by design makkelijker te hanteren",
+            "text": "lorem",
+            "1": {
+              "title": "Het gebruik van deze tools en methodes verwerken we in het privacybeleid, zodat het duidelijk is hoe we te werk gaan.",
+              "text": "lorem"
+            },
+            "2": {
+              "title": "We maken al gebruik van een aantal tools. We kunnen dus ook overwegen om andere nuttige tools te gaan gebruiken",
+              "text": "lorem"
+            }
+          },
+          "2": {
+            "title": "Voorbeelden van tools en waar ze voor worden gebruikt",
+            "text": "lorem"
+          },
+          "3": {
+            "title": "Voorbeelden van methodes die we kunnen toepassen",
+            "text": "lorem"
+          }
+        }
+      },
+      "kennis": {
+        "title": "Kennis",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam blandit imperdiet massa in bibendum. Praesent sit amet feugiat odio. Maecenas nec pharetra ex, vitae sollicitudin sapien. Morbi vitae velit id lectus semper placerat. Donec quis orci non velit mattis elementum vel eu tortor. Nam nec urna ligula. Curabi,",
+
+        "1": {
+          "title": "Er is binnen het gehele team kennis, maar eigenlijk nog te weinig",
+          "text": "lorem",
+          "1": {
+            "title": "Kennis kan worden verbreed door periodiek (bijvoorbeeld maandelijks) presentaties te geven die interessante informatie en trends toelichten.",
+            "text": "lorem",
+            "1": {
+              "title": "Kan worden gedaan door de SecOps engineer (nieuwe rol die binnenkort wordt toegevoegd), of solutions architect (doet trendwatching)",
+              "text": "lorem"
+            }
+          }
+        },
+        "2": {
+          "title": "Extra kennis helpt Notive om te groeien",
+          "text": "lorem"
+        }
+      }
     },
     "conclusie": {
       "title": "Conclusie",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam blandit imperdiet massa in bibendum. Praesent sit amet feugiat odio. Maecenas nec pharetra ex, vitae sollicitudin sapien. Morbi vitae velit id lectus semper placerat. Donec quis orci non velit mattis elementum vel eu tortor. Nam nec urna ligula. Curabi,"
+      "summary": {
+        "title": "Samenvatting",
+        "text": "Lorem ipsum blablabla"
+      },
+      "recommendation": {
+        "title": "Aanbevelingen",
+        "text": "Lorem ipsum blablabla"
+      }
     },
     "bronnenlijst": {
       "title": "Bronnenlijst",
-      "1": "bron1",
-      "2": "bron2",
-      "3": "bron3",
-      "4": "bron4"
+      "1": "Antunes, P., & Guimarães, N. (2024). Guiding the implementation of data privacy with microservices. International Journal of Information Security, 23, 3591–3608. https://doi.org/10.1007/s10207-024-00907-y",
+      "2": "Assessing Software Privacy Using the Privacy Flow-Graph. (2022). ACM Digital Library. https://dl.acm.org/doi/10.1145/3549035.3561185",
+      "3": "AVG Support. (z.d.). GDPR: Aan welke regels moet je voldoen? https://www.avg-support.nl/nieuws/gdpr-aan-welke-regels-moet-je-voldoen/",
+      "4": "Cavoukian, A. (2022). Privacy by Design: In law, policy and practice [White paper]. Global Privacy & Security by Design Centre. https://gpsbydesigncentre.com/wp-content/uploads/2022/02/312239.pdf",
+      "5": "Digitale Opsporing. (z.d.). Hoeveel een datalek je kost. https://www.digitaleopsporing.nl/hoeveel-een-datalek-je-kost/",
+      "6": "Esri Nederland. (z.d.). Werken conform de AVG: sta jij daar bij stil? https://www.esri.nl/nl-nl/newsroom/blog/werken-conform-de-avg-sta-jij-daar-bij-stil",
+      "7": "Exabeam. (2025, 6 november). 8 Types of GDPR Tools and How to Choose. https://www.exabeam.com/explainers/gdpr-compliance/8-types-of-gdpr-tools-and-how-to-choose/",
+      "8": "Janssen, D. (2024, 16 juli). Big data en privacy. VPNGids. https://www.vpngids.nl/privacy/anoniem-browsen/big-data-en-privacy/",
+      "9": "Kamer van Koophandel (KvK). (2025, 3 juni). Privacywetgeving AVG: Wanneer ben je compliant? https://www.kvk.nl/wetten-en-regels/privacywetgeving-avg-wanneer-ben-je-compliant/",
+      "10": "Martín, Y.-S., & Kung, A. (2018). Methods and tools for GDPR compliance through privacy and data protection engineering. In Proceedings of the 2018 IEEE European Symposium on Security and Privacy Workshops (EuroS&PW), 108–111. https://doi.org/10.1109/EuroSPW.2018.00021",
+      "11": "Orange Cyber Defense. (2025, 11 augustus). Het post-quantum tijdperk: de uitdagingen en strategieën voor cybersecurity. https://www.orangecyberdefense.com/nl/blog/cybersecurity/het-post-quantum-tijdperk-de-uitdagingen-en-strategieen-voor-cybersecurity",
+      "12": "Usercentrics. (z.d.). Data privacy audit: Are you data compliant? https://usercentrics.com/data-privacy-audit-are-you-data-compliant-nl/"
     }
   }
 }

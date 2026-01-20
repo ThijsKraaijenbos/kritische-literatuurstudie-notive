@@ -1,8 +1,8 @@
 import {forwardRef, type ReactNode, useEffect, useRef, useState} from "react";
 import gsap from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
-import {cn} from "../utils/cn.ts";
-import {t} from "../utils/t.ts";
+import {cn} from "../../utils/cn.ts";
+import {t} from "../../utils/t.ts";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -161,6 +161,9 @@ export const ImpactLadder = () => {
       { opacity: 0, y: -10 },
       { opacity: 1, y: 0, duration: 0.5, stagger: 0.2 }
     );
+    return () => {
+      tl.kill();
+    };
   }, []);
 
   // Draw connections with GSAP

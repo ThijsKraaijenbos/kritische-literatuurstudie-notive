@@ -1,5 +1,5 @@
-import { Divider } from "./Divider.tsx";
-import {t} from "../utils/t.ts";
+import { Divider } from "../Divider.tsx";
+import {t} from "../../utils/t.ts";
 import {useEffect} from "react";
 import gsap from "gsap";
 
@@ -32,6 +32,9 @@ export const Header = () => {
         ease: "back.out(1.5)",
       }
     )
+    return () => {
+      tl.kill();
+    };
   })
 
   return (
@@ -46,9 +49,9 @@ export const Header = () => {
           <h1 className={"text-center anim-text"}>{t("mainTitle")}</h1>
           <h2 className={"text-center !text-2xl anim-text"}>{t("mainSubtitle")}</h2>
         </div>
-        <div className={"absolute bottom-2 left-4"}>
-          <p className={"text-start !text-white !font-bold !font-open-sans anim-text-left"}>{t("headerDetails")}</p>
-          <p className={"text-start !text-white !font-bold !font-open-sans anim-text-left"}>{t("date")}</p>
+        <div className={"absolute bottom-2"}>
+          <p className={"text-center !text-white !font-bold !font-open-sans anim-text-left"}>{t("headerDetails")}</p>
+          <p className={"text-center !text-white !font-bold !font-open-sans anim-text-left"}>{t("date")}</p>
         </div>
       </header>
 

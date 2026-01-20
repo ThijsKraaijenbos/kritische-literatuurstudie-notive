@@ -1,8 +1,8 @@
-import {t} from "../utils/t.ts";
-import {cn} from "../utils/cn.ts";
+import {t} from "../../utils/t.ts";
+import {cn} from "../../utils/cn.ts";
 import {type ReactNode, useEffect, useRef} from "react";
-import {CardTitle} from "./typography/CardTitle.tsx";
-import {TitleColor} from "./Card.tsx";
+import {CardTitle} from "../typography/CardTitle.tsx";
+import {TitleColor} from "../Card.tsx";
 import gsap from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
 
@@ -107,7 +107,6 @@ export default function ConfrontatieMatrix() {
     }
 
     return () => {
-      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
       tl.kill();
     };
   }, []);

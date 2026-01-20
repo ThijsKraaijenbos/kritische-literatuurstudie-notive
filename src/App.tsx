@@ -1,10 +1,13 @@
 import {SectionTemplate} from "./components/SectionTemplate.tsx";
 import {t} from "./utils/t.ts";
-import {SwotAnalysis} from "./components/SwotAnalysis.tsx";
-import ConfrontationMatrix from "./components/ConfrontationMatrix.tsx";
-import ProblemAndContext from "./components/ProblemAndContext.tsx";
-import {ImpactLadder} from "./components/ImpactLadder.tsx";
-import {Header} from "./components/Header.tsx";
+import {SwotAnalysis} from "./components/sections/SwotAnalysis.tsx";
+import ConfrontationMatrix from "./components/sections/ConfrontationMatrix.tsx";
+import ProblemAndContext from "./components/sections/ProblemAndContext.tsx";
+import {ImpactLadder} from "./components/sections/ImpactLadder.tsx";
+import {Header} from "./components/sections/Header.tsx";
+import {Reasoning} from "./components/sections/Reasoning.tsx";
+import {Sources} from "./components/sections/Sources.tsx";
+import {Conclusion} from "./components/sections/Conclusion.tsx";
 
 function App() {
   return (
@@ -49,23 +52,21 @@ function App() {
         <SectionTemplate
           title={t("onderbouwing.title")}>
           <p className="w-[60%]">
-            {t("impactladder.description")}
+            {t("onderbouwing.description")}
           </p>
+          <Reasoning/>
         </SectionTemplate>
 
         {/* Conclusie */}
         <SectionTemplate
           title={t("conclusie.title")}>
-          <p className="w-[60%]">
-            {t("impactladder.description")}
-          </p>
+          <Conclusion/>
         </SectionTemplate>
 
+        {/*Bronnen*/}
         <SectionTemplate
           title={t("bronnenlijst.title")}>
-          <p className="w-[60%]">
-            {t("impactladder.description")}
-          </p>
+          <Sources/>
         </SectionTemplate>
       </main>
     </div>
