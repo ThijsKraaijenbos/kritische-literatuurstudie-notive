@@ -8,8 +8,8 @@
       "title": "Probleem & Context",
       "context": {
         "title": "Context",
-        "description1": "Het is geen nieuw feit dat het in de huidige tijd uiterst cruciaal is om ervoor te zorgen dat er op een verantwoorde en veilige manier wordt omgegaan met persoonsgegevens. Deze gegevens zijn namelijk erg gevoelig, waardoor het veel nadelige effecten kan hebben als deze gegevens worden gelekt of in verkeerde handen terechtkomen.",
-        "description2": "Het doel van dit onderzoek is om uit te zoeken op welke manieren Notive consistent aan de AVG regelgeving kan voldoen.",
+        "description1": "Het is geen nieuw feit dat het in de huidige tijd cruciaal is om ervoor te zorgen dat er op een verantwoorde en veilige manier wordt omgegaan met persoonsgegevens. Deze gegevens zijn namelijk erg gevoelig, waardoor het veel nadelige effecten kan hebben als deze gegevens worden gelekt of in verkeerde handen terechtkomen.",
+        "description2": "Het doel van dit onderzoek is om uit te zoeken op welke manieren Notive consistent aan de AVG (Algemene Verordening Gegevensbescherming) regelgeving kan voldoen.",
         "description3": "Om de context beter in kaart te brengen maak ik gebruik van een SWOT-analyse, confrontatiematrix, en een impactladder."
       },
       "onderzoeksvraag": {
@@ -54,7 +54,7 @@
     "confrontatiematrix": {
       "title": "Confrontatiematrix",
       "total": "Totaal:",
-      "description": "De confrontatiematrix brengt de interne sterktes en zwaktes van Notive in kaart tegenover externe kansen en bedreigingen. Hiermee kan worden bepaald welke strategieën effectief ingezet kunnen worden om de organisatie te versterken en risico’s te beperken.",
+      "description": "De confrontatiematrix brengt de interne sterktes en zwaktes van Notive in kaart tegenover externe kansen en bedreigingen. Het is een subjectieve manier om zelf te bepalen wat relevant is op basis van hoe ik denk dat deze factoren tegenover elkaar staan. Op basis van de hoogste en laagste scores wordt bepaald welke onderwerpen relevant zijn voor het onderzoek en dus mogelijk een kunnen leiden tot een oplossing. Een extreem hoge score betekent dat dit onderwerp relevant is voor het onderzoek en zou kunnen dienen als ondersteuning. De extreem hoge en lage scores zijn het meest relevant voor het onderzoek. Deze onderwerpen kunnen namelijk worden ingezet als hulpmiddel, of juist hele grote obstakels vormen.",
       "sterktes": {
         "title": "Sterktes",
         "1": "Diverse kennisvlakken",
@@ -82,7 +82,7 @@
     },
     "impactladder": {
       "title": "Impactladder",
-      "description": "De impactladder geeft inzicht in de stappen die Notive kan nemen om de omgang met gevoelige gegevens te verbeteren. Het begint bij het probleem, gevolgd door kennisopbouw, implementatie van tools en beleid, actief gebruik van privacyprincipes, en eindigt met volledige AVG-conformiteit.",
+      "description": "De impactladder geeft inzicht in de stappen die Notive kan nemen om het uiteindelijke doel te bereiken (de impact). Het begint bij het probleem, gevolgd door het verbreden van de kennis, daarna de implementatie van tools en beleidsmaatregelen, actief gebruik van privacyprincipes, en eindigt met volledige AVG-conformiteit. Elke stap is een oorzaak die leidt tot het gevolg dat beschreven staat in de stap erboven.",
       "steps": {
         "1": {
           "title": "Impact",
@@ -111,96 +111,95 @@
     },
     "onderbouwing": {
       "title": "Onderbouwing",
-      "description": "Deze sectie onderbouwt het standpunt dat Notive een duidelijk privacy- en securitybeleid moet hanteren. Er wordt ingegaan op privacybeleid, privacy by design, en het vergroten van kennis binnen het team.",
+      "description": "In deze sectie onderbouw ik het standpunt dat ik aan het begin had vastgesteld in de sectie 'Probleem & Context'. Er wordt ingegaan op het privacybeleid, het privacy by design principe, en het vergroten van kennis binnen het team.",
+
       "privacyBeleid": {
         "title": "Privacybeleid",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam blandit imperdiet massa in bibendum. Praesent sit amet feugiat odio. Maecenas nec pharetra ex, vitae sollicitudin sapien. Morbi vitae velit id lectus semper placerat. Donec quis orci non velit mattis elementum vel eu tortor. Nam nec urna ligula. Curabi,",
         "1": {
           "title": "AVG regelgeving is streng",
-          "text": "lorem"
+          "text": "De AVG stelt hoge eisen. Als je als bedrijf deze regelgeving niet goed naleeft kan het leiden tot forse boetes en schade aan de reputatie van het bedrijf & de partners. (bron 3, 5, 6)"
         },
         "2": {
           "title": "Maakt het duidelijk wat de beleidsmaatregelen zijn",
-          "text": "lorem",
+          "text": "Een helder beleid maakt voor iedereen binnen het bedrijf duidelijk welke stappen en procedures gevolgd moeten worden. Daarnaast zou een duidelijk privacybeleid tegenover de partners & klanten de kans bieden om te begrijpen wat Notive voor hen doet op dit gebied. (bron 8)",
           "1": {
             "title": "Blijf transparant",
-            "text": "lorem"
+            "text": "Transparantie richting het team, maar ook naar de partners en klanten versterkt het vertrouwen en helpt juridische risico’s te minimaliseren."
           },
           "2": {
             "title": "Maakt het duidelijk welke tools en methodes we gebruiken",
-            "text": "lorem"
+            "text": "Door te documenteren welke tools en methodes we inzetten weet iedereen hoe gegevens veilig en conform de AVG verwerkt moeten worden. Zo wordt er ook gezorgd voor consistentie in het gebruik van de verschillende tools."
           }
         }
       },
       "pbd": {
         "title": "Privacy by design",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam blandit imperdiet massa in bibendum. Praesent sit amet feugiat odio. Maecenas nec pharetra ex, vitae sollicitudin sapien. Morbi vitae velit id lectus semper placerat. Donec quis orci non velit mattis elementum vel eu tortor. Nam nec urna ligula. Curabi,",
         "1": {
-          "title": "Als je vanaf het begin van het proces privacy by design integreert in de werkwijze voorkom je problemen",
-          "text": "lorem",
+          "title": "Vroeg integreren",
+          "text": "Door het privacy by design principe vanaf het begin van het proces te integreren zorg je ervoor dat AVG-compliance niet als bijzaak wordt gezien, maar een geïntegreerd onderdeel van de workflow. (bron 10)",
           "1": {
-            "title": "Zoals eerder genoemd bij subargument 1 van argument 1 is de AVG regelgeving streng / wettelijke verplichting.",
-            "text": "w"
+            "title": "Problemen voorkomen",
+            "text": "Zoals al eerder vermeld was, is de AVG regelgeving een strenge wettelijke verplichting. Het toepassen van privacy by design helpt om te voldoen aan wettelijke verplichtingen."
           }
         },
         "2": {
-          "title": "Tegenargument: Veel developers vinden het moeilijk om privacy by design effectief toe te passen."
+          "title": "Moeite met toepassen (tegenargument)",
+          "text": "Het kan een uitdaging zijn voor developers om privacy by design goed toe te passen, omdat dit planning en extra kennis vereist (bron 10).  Maar gelukkig is hier een oplossing voor. Er bestaan verschillende tools en methodes om hierbij te helpen. Deze tools en methodes worden hieronder verder uitgelegd."
         },
         "3": {
-          "title": "Externe tools en methodes moeten worden ingezet",
-          "text": "lorem",
+          "title": "Externe tools en methodes inzetten",
+          "text": "Speciale tools helpen om privacy by design praktisch toe te passen en te monitoren, waardoor het makkelijker wordt om te voldoen aan de AVG regelgeving. Daarnaast zijn er ook methodes om bijvoorbeeld te zorgen dat de codestructuur van een project op een bepaalde wijze is ingedeeld die het makkelijker maakt om conform de AVG te werken.",
           "1": {
-            "title": "Er zijn verschillende tools en methodes ontworpen specifiek om privacy by design makkelijker te hanteren",
-            "text": "lorem",
+            "title": "Tools specifiek voor privacy by design",
+            "text": "Er zijn verschillende tools en methodes ontworpen specifiek om privacy by design makkelijker te hanteren.",
             "1": {
-              "title": "Het gebruik van deze tools en methodes verwerken we in het privacybeleid, zodat het duidelijk is hoe we te werk gaan.",
-              "text": "lorem"
+              "title": "Verwerking in het privacybeleid",
+              "text": "Door vast te leggen welke privacy tools en methodes worden gebruikt, ontstaat er duidelijkheid en consistentie binnen de organisatie. Dit zorgt ervoor dat medewerkers weten welke stappen zij moeten volgen bij het verwerken van persoonsgegevens en voorkomt dat privacymaatregelen willekeurig of onvolledig worden toegepast."
             },
             "2": {
-              "title": "We maken al gebruik van een aantal tools. We kunnen dus ook overwegen om andere nuttige tools te gaan gebruiken",
-              "text": "lorem"
+              "title": "We maken al gebruik van een aantal tools",
+              "text": "Omdat Notive al gebruikmaakt van verschillende tools, is er al een goede basis om op voort te bouwen. Zo kan er een sterke infrastructuur worden gemaakt binnen Notive."
             }
           },
           "2": {
-            "title": "Voorbeelden van tools en waar ze voor worden gebruikt",
-            "text": "lorem"
+            "title": "Voorbeelden van tools",
+            "text": "Een aantal tools zijn onder andere data discovery tools, DPIA tools, consent management tools, encryption tools, etc. (bron 4). Deze tools kunnen worden ingezet om allerlei verschillende analyses uit te voeren binnen verschillende systemen en processen. Zo kun je bijvoorbeeld data-flows vastleggen, gemakkelijk cookies managen, data versleutelen, etc. (bron 7)"
           },
           "3": {
-            "title": "Voorbeelden van methodes die we kunnen toepassen",
-            "text": "lorem"
+            "title": "Voorbeelden van methodes",
+            "text": "De verschillende methodes die ik had gevonden waren een aantal modellen die gebaseerd zijn op de microservices architectuur. Dat zijn de volgende: Gatekeeper model, Service model, Federation model, Mesh model, Enclave model, Sidecar model, Endpoint model. Deze verschillende modellen kunnen worden toegepast als design pattern bij het bouwen van een microservice die gevoelige data verwerkt. (bron 1)"
           }
         }
       },
       "kennis": {
         "title": "Kennis",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam blandit imperdiet massa in bibendum. Praesent sit amet feugiat odio. Maecenas nec pharetra ex, vitae sollicitudin sapien. Morbi vitae velit id lectus semper placerat. Donec quis orci non velit mattis elementum vel eu tortor. Nam nec urna ligula. Curabi,",
         "1": {
-          "title": "Er is binnen het gehele team kennis, maar eigenlijk nog te weinig",
-          "text": "lorem",
+          "title": "Er is binnen het gehele team kennis, maar het kan beter",
+          "text": "Binnen het team van Notive is voldoende kennis over privacy en beveiliging, aangezien er een groot team aan developers rondloopt. Maar dit kan verbeterd worden. Wellicht kan het bijvoorbeeld handig zijn als het gehele team (inclusief office management & marketing team) kennis heeft over privacy & security. Zo kunnen zij ook meedenken.",
           "1": {
-            "title": "Kennis kan worden verbreed door periodiek (bijvoorbeeld maandelijks) presentaties te geven die interessante informatie en trends toelichten.",
-            "text": "lorem",
-            "1": {
-              "title": "Kan worden gedaan door de SecOps engineer (nieuwe rol die binnenkort wordt toegevoegd), of solutions architect (doet trendwatching)",
-              "text": "lorem"
-            }
+            "title": "Kennis kan worden verbreed door middel van presentaties.",
+            "text": "Deze presentaties kunnen periodiek (bijvoorbeeld maandelijks) worden gegeven om interessante informatie en nieuwe trends toelichten. Dit kan wellicht worden gedaan door de SecOps engineer (nieuwe rol die binnenkort wordt toegevoegd), of door de solutions architect."
           }
         },
         "2": {
           "title": "Extra kennis helpt Notive om te groeien",
-          "text": "lorem"
+          "text": "Ook helpt de extra kennis voor de groei van het bedrijf. Als het marketing team meer kennis heeft kunnen zij bijvoorbeeld beter aan de klanten uitleggen hoe Notive bepaalde securityfeatures implementeren in het geval dat klanten daar vragen vragen hebben. Daarnaast biedt het ook een kans om te laten zien dat Notive er alles aan doet om te zorgen dat de AVG regelgeving wordt gevolgd en dat er verantwoordelijk met gevoelige gegevens wordt omgegaan."
         }
       }
     },
     "conclusie": {
       "title": "Conclusie",
-      "summary": {
-        "title": "Samenvatting",
-        "text": "Lorem ipsum blablabla"
-      },
       "recommendation": {
         "title": "Aanbevelingen",
-        "text": "Lorem ipsum blablabla"
+        "1": "Stel een duidelijk privacy- en securitybeleid vast",
+        "2": "Documenteer het gebruik van (externe) tools",
+        "3": "Integreer ‘Privacy by Design’ structureel in processen",
+        "4": "Ondersteun beleid met geschikte tools en maatregelen"
+      },
+      "summary": {
+        "title": "Samenvatting",
+        "text1": "Uit de analyse is gebleken dat het beleid rondom privacy en security op dit moment nog onvoldoende is vastgesteld binnen Notive. Terwijl er grote negatieve gevolgen kunnen zijn als er niet wordt voldaan aan de AVG regelgeving. Door middel van een SWOT-analyse, confrontatiematrix en een impactladder heb ik inzicht gekregen in de verschillende relevante factoren die komen kijken bij dit onderwerp.",
+        "text2": "Uit de resultaten blijkt dat Notive zich moet focussen op het vaststellen van een duidelijk privacy- en securitybeleid. Dit beleid moet dienen als één centrale plek waar alle informatie staat over de verschillende (externe) tools waar Notive gebruik van maakt voor taken die te maken hebben met privacy- en security. Door privacy by design structureel te integreren, ondersteund door de tools en beleidsmaatregelen, kan Notive consistent aan projecten werken conform de AVG regelgeving en het vertrouwen van klanten en partners versterken."
       }
     },
     "bronnenlijst": {

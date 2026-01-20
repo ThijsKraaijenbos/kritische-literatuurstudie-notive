@@ -232,7 +232,6 @@ export const ImpactLadder = () => {
 
     return () => {
       window.removeEventListener("resize", handleResize);
-      svgRef.current!.innerHTML = ""; // cleanup
     };
   }, [showConnections]);
 

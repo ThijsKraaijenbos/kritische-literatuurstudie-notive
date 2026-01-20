@@ -23,7 +23,7 @@ function App() {
           {/* SWOT analyse */}
           <SectionTemplate
             title={t("swot.title")}>
-            <p className="w-[60%] text-lg">
+            <p className="w-[80%] text-lg">
               {t("swot.description")}
             </p>
 
@@ -33,7 +33,7 @@ function App() {
           {/* Confrontatiematrix */}
           <SectionTemplate
             title={t("confrontatiematrix.title")}>
-            <p className="w-[60%] text-lg">
+            <p className="w-[80%] text-lg">
               {t("confrontatiematrix.description")}
             </p>
               <ConfrontationMatrix/>
@@ -42,7 +42,7 @@ function App() {
           {/* Impactladder */}
           <SectionTemplate
             title={t("impactladder.title")}>
-            <p className="w-[60%] text-lg">
+            <p className="w-[80%] text-lg">
               {t("impactladder.description")}
             </p>
             <ImpactLadder/>
@@ -51,7 +51,7 @@ function App() {
           {/* Onderbouwing */}
           <SectionTemplate
             title={t("onderbouwing.title")}>
-            <p className="w-[60%] text-lg">
+            <p className="w-[80%] text-lg">
               {t("onderbouwing.description")}
             </p>
             <Reasoning/>

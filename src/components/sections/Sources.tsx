@@ -47,7 +47,7 @@ export const Sources = () => {
             sourceRefs.current[index] = el;
           }}
         >
-          {t(`bronnenlijst.${index + 1}`)}
+          {`[${index + 1}] ` + t(`bronnenlijst.${index + 1}`)}
         </BulletPoint>
       ))}
     </div>

@@ -45,11 +45,11 @@ export const Header = () => {
           alt="Header banner"
           className="w-full h-full object-cover brightness-95"
         />
-        <div className={"absolute"}>
+        <div className={"absolute top-20"}>
           <h1 className={"text-center anim-text"}>{t("mainTitle")}</h1>
           <h2 className={"text-center !text-2xl anim-text"}>{t("mainSubtitle")}</h2>
         </div>
-        <div className={"absolute bottom-2"}>
+        <div className={"absolute bottom-4"}>
           <p className={"text-center !text-white !font-bold !font-open-sans anim-text-left"}>{t("headerDetails")}</p>
           <p className={"text-center !text-white !font-bold !font-open-sans anim-text-left"}>{t("date")}</p>
         </div>

@@ -3,6 +3,7 @@ import {Card} from "../Card.tsx";
 import gsap from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
 import {useEffect, useRef} from "react";
+import {BulletPoint} from "../typography/BulletPoint.tsx";
 
 gsap.registerPlugin(ScrollTrigger);
 export const Conclusion = () => {
@@ -41,20 +42,25 @@ export const Conclusion = () => {
     <div className="gap-x-8 flex flex-row justify-center w-[80%] problemAndContext">
       <Card
         background={true}
-        title={t("conclusie.summary.title")}
-        className="basis-1/2 animated-card"
-        ref={card1Ref}
-      >
-        <p>{t("conclusie.summary.text")}</p>
-      </Card>
-
-      <Card
-        background={true}
         title={t("conclusie.recommendation.title")}
         className="basis-1/2 animated-card"
         ref={card2Ref}
       >
-        <p>{t("conclusie.recommendation.text")}</p>
+        <span>
+          <BulletPoint>{t("conclusie.recommendation.1")}</BulletPoint>
+          <BulletPoint>{t("conclusie.recommendation.2")}</BulletPoint>
+          <BulletPoint>{t("conclusie.recommendation.3")}</BulletPoint>
+          <BulletPoint>{t("conclusie.recommendation.4")}</BulletPoint>
+        </span>
+      </Card>
+      <Card
+        background={true}
+        title={t("conclusie.summary.title")}
+        className="basis-1/2 animated-card"
+        ref={card1Ref}
+      >
+        <p>{t("conclusie.summary.text1")}</p>
+        <p>{t("conclusie.summary.text2")}</p>
       </Card>
     </div>
   );
