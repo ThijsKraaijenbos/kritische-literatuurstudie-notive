@@ -8,9 +8,11 @@ import {Header} from "./components/sections/Header.tsx";
 import {Reasoning} from "./components/sections/Reasoning.tsx";
 import {Sources} from "./components/sections/Sources.tsx";
 import {Conclusion} from "./components/sections/Conclusion.tsx";
-import gsap from "gsap"
 
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+import gsap from "gsap";
+import { ScrollSmoother } from "gsap/ScrollSmoother";
+
+gsap.registerPlugin(ScrollSmoother);
 
 function App() {
   ScrollSmoother.create({
