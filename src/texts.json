@@ -54,7 +54,7 @@
     "confrontatiematrix": {
       "title": "Confrontatiematrix",
       "total": "Totaal:",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam blandit imperdiet massa in bibendum. Praesent sit amet feugiat odio. Maecenas nec pharetra ex, vitae sollicitudin sapien. Morbi vitae velit id lectus semper placerat. Donec quis orci non velit mattis elementum vel eu tortor. Nam nec urna ligula. Curabi,",
+      "description": "De confrontatiematrix brengt de interne sterktes en zwaktes van Notive in kaart tegenover externe kansen en bedreigingen. Hiermee kan worden bepaald welke strategieën effectief ingezet kunnen worden om de organisatie te versterken en risico’s te beperken.",
       "sterktes": {
         "title": "Sterktes",
         "1": "Diverse kennisvlakken",
@@ -82,7 +82,7 @@
     },
     "impactladder": {
       "title": "Impactladder",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam blandit imperdiet massa in bibendum. Praesent sit amet feugiat odio. Maecenas nec pharetra ex, vitae sollicitudin sapien. Morbi vitae velit id lectus semper placerat. Donec quis orci non velit mattis elementum vel eu tortor. Nam nec urna ligula. Curabi,",
+      "description": "De impactladder geeft inzicht in de stappen die Notive kan nemen om de omgang met gevoelige gegevens te verbeteren. Het begint bij het probleem, gevolgd door kennisopbouw, implementatie van tools en beleid, actief gebruik van privacyprincipes, en eindigt met volledige AVG-conformiteit.",
       "steps": {
         "1": {
           "title": "Impact",
@@ -111,7 +111,7 @@
     },
     "onderbouwing": {
       "title": "Onderbouwing",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam blandit imperdiet massa in bibendum. Praesent sit amet feugiat odio. Maecenas nec pharetra ex, vitae sollicitudin sapien. Morbi vitae velit id lectus semper placerat. Donec quis orci non velit mattis elementum vel eu tortor. Nam nec urna ligula. Curabi,",
+      "description": "Deze sectie onderbouwt het standpunt dat Notive een duidelijk privacy- en securitybeleid moet hanteren. Er wordt ingegaan op privacybeleid, privacy by design, en het vergroten van kennis binnen het team.",
       "privacyBeleid": {
         "title": "Privacybeleid",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam blandit imperdiet massa in bibendum. Praesent sit amet feugiat odio. Maecenas nec pharetra ex, vitae sollicitudin sapien. Morbi vitae velit id lectus semper placerat. Donec quis orci non velit mattis elementum vel eu tortor. Nam nec urna ligula. Curabi,",
