@@ -39,7 +39,7 @@ export default function ProblemAndContext() {
   }, []);
 
   return (
-    <div className="gap-x-8 flex flex-row justify-center w-[80%] problemAndContext">
+    <div className="gap-x-8 flex flex-row justify-center w-[100%] 4xl:w-[70%]   problemAndContext">
       <Card
         background={true}
         title={t("probleemEnContext.context.title")}

@@ -9,19 +9,9 @@ import {Reasoning} from "./components/sections/Reasoning.tsx";
 import {Sources} from "./components/sections/Sources.tsx";
 import {Conclusion} from "./components/sections/Conclusion.tsx";
 
-import gsap from "gsap";
-import { ScrollSmoother } from "gsap/ScrollSmoother";
-
-gsap.registerPlugin(ScrollSmoother);
-
 function App() {
-  ScrollSmoother.create({
-    smooth: 1.5, // how long (in seconds) it takes to "catch up" to the native scroll position
-  });
-
   return (
-    <div id={"smooth-wrapper"}>
-      <div className={"gap-y-24 flex flex-col"} id={"smooth-content"}>
+      <div className={"gap-y-24 flex flex-col"}>
         <Header></Header>
         <main className="flex flex-col justify-center items-center gap-x-8 gap-y-24 mx-auto max-w-[75%] 2xl:max-w-[70%] xl:max-w-[80%]">
           {/* Probleem En Context */}
@@ -80,7 +70,6 @@ function App() {
           </SectionTemplate>
         </main>
       </div>
-    </div>
   );
 }
 
