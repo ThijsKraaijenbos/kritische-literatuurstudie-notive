@@ -46,7 +46,9 @@ export default function ProblemAndContext() {
         className="basis-1/3 animated-card"
         ref={card1Ref}
       >
-        <p>{t("probleemEnContext.context.description")}</p>
+        <p>{t("probleemEnContext.context.description1")}</p>
+        <p>{t("probleemEnContext.context.description2")}</p>
+        <p>{t("probleemEnContext.context.description3")}</p>
       </Card>
 
       <Card
@@ -55,7 +57,8 @@ export default function ProblemAndContext() {
         className="basis-1/3 animated-card"
         ref={card2Ref}
       >
-        <p>{t("probleemEnContext.onderzoeksvraag.description")}</p>
+        <p>{t("probleemEnContext.onderzoeksvraag.description1")}</p>
+        <p>{t("probleemEnContext.onderzoeksvraag.description2")}</p>
       </Card>
 
       <Card
@@ -64,7 +67,8 @@ export default function ProblemAndContext() {
         className="basis-1/3 animated-card"
         ref={card3Ref}
       >
-        <p>{t("probleemEnContext.standpunt.description")}</p>
+        <p>{t("probleemEnContext.standpunt.description1")}</p>
+        <p>{t("probleemEnContext.standpunt.description2")}</p>
       </Card>
     </div>
   );

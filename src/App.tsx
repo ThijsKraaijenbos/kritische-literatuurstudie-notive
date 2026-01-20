@@ -8,67 +8,76 @@ import {Header} from "./components/sections/Header.tsx";
 import {Reasoning} from "./components/sections/Reasoning.tsx";
 import {Sources} from "./components/sections/Sources.tsx";
 import {Conclusion} from "./components/sections/Conclusion.tsx";
+import gsap from "gsap"
+
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 function App() {
+  ScrollSmoother.create({
+    smooth: 1.5, // how long (in seconds) it takes to "catch up" to the native scroll position
+  });
+
   return (
-    <div className={"gap-y-24 flex flex-col"}>
-      <Header></Header>
-      <main className="flex flex-col justify-center items-center gap-x-8 gap-y-24 mx-auto max-w-[75%] 2xl:max-w-[70%] xl:max-w-[80%]">
-        {/* Probleem En Context */}
-        <SectionTemplate
-          title={t('probleemEnContext.title')}>
-          <ProblemAndContext/>
-        </SectionTemplate>
+    <div id={"smooth-wrapper"}>
+      <div className={"gap-y-24 flex flex-col"} id={"smooth-content"}>
+        <Header></Header>
+        <main className="flex flex-col justify-center items-center gap-x-8 gap-y-24 mx-auto max-w-[75%] 2xl:max-w-[70%] xl:max-w-[80%]">
+          {/* Probleem En Context */}
+          <SectionTemplate
+            title={t('probleemEnContext.title')}>
+            <ProblemAndContext/>
+          </SectionTemplate>
 
-        {/* SWOT analyse */}
-        <SectionTemplate
-          title={t("swot.title")}>
-          <p className="w-[60%]">
-            {t("swot.description")}
-          </p>
+          {/* SWOT analyse */}
+          <SectionTemplate
+            title={t("swot.title")}>
+            <p className="w-[60%] text-lg">
+              {t("swot.description")}
+            </p>
 
-          <SwotAnalysis/>
-        </SectionTemplate>
+            <SwotAnalysis/>
+          </SectionTemplate>
 
-        {/* Confrontatiematrix */}
-        <SectionTemplate
-          title={t("confrontatiematrix.title")}>
-          <p className="w-[60%]">
-            {t("confrontatiematrix.description")}
-          </p>
-            <ConfrontationMatrix/>
-        </SectionTemplate>
+          {/* Confrontatiematrix */}
+          <SectionTemplate
+            title={t("confrontatiematrix.title")}>
+            <p className="w-[60%] text-lg">
+              {t("confrontatiematrix.description")}
+            </p>
+              <ConfrontationMatrix/>
+          </SectionTemplate>
 
-        {/* Impactladder */}
-        <SectionTemplate
-          title={t("impactladder.title")}>
-          <p className="w-[60%]">
-            {t("impactladder.description")}
-          </p>
-          <ImpactLadder/>
-        </SectionTemplate>
+          {/* Impactladder */}
+          <SectionTemplate
+            title={t("impactladder.title")}>
+            <p className="w-[60%] text-lg">
+              {t("impactladder.description")}
+            </p>
+            <ImpactLadder/>
+          </SectionTemplate>
 
-        {/* Onderbouwing */}
-        <SectionTemplate
-          title={t("onderbouwing.title")}>
-          <p className="w-[60%]">
-            {t("onderbouwing.description")}
-          </p>
-          <Reasoning/>
-        </SectionTemplate>
+          {/* Onderbouwing */}
+          <SectionTemplate
+            title={t("onderbouwing.title")}>
+            <p className="w-[60%] text-lg">
+              {t("onderbouwing.description")}
+            </p>
+            <Reasoning/>
+          </SectionTemplate>
 
-        {/* Conclusie */}
-        <SectionTemplate
-          title={t("conclusie.title")}>
-          <Conclusion/>
-        </SectionTemplate>
+          {/* Conclusie */}
+          <SectionTemplate
+            title={t("conclusie.title")}>
+            <Conclusion/>
+          </SectionTemplate>
 
-        {/*Bronnen*/}
-        <SectionTemplate
-          title={t("bronnenlijst.title")}>
-          <Sources/>
-        </SectionTemplate>
-      </main>
+          {/*Bronnen*/}
+          <SectionTemplate
+            title={t("bronnenlijst.title")}>
+            <Sources/>
+          </SectionTemplate>
+        </main>
+      </div>
     </div>
   );
 }

@@ -8,20 +8,24 @@
       "title": "Probleem & Context",
       "context": {
         "title": "Context",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam blandit imperdiet massa in bibendum. Praesent sit amet feugiat odio. Maecenas nec pharetra ex, vitae sollicitudin sapien. Morbi vitae velit id lectus semper placerat. Donec quis orci non velit mattis elementum vel eu tortor. Nam nec urna ligula. Curabi,"
+        "description1": "Het is geen nieuw feit dat het in de huidige tijd uiterst cruciaal is om ervoor te zorgen dat er op een verantwoorde en veilige manier wordt omgegaan met persoonsgegevens. Deze gegevens zijn namelijk erg gevoelig, waardoor het veel nadelige effecten kan hebben als deze gegevens worden gelekt of in verkeerde handen terechtkomen.",
+        "description2": "Het doel van dit onderzoek is om uit te zoeken op welke manieren Notive consistent aan de AVG regelgeving kan voldoen.",
+        "description3": "Om de context beter in kaart te brengen maak ik gebruik van een SWOT-analyse, confrontatiematrix, en een impactladder."
       },
       "onderzoeksvraag": {
         "title": "Onderzoeks\u00ADvraag",
-        "description": "Welke processen, tools en beleidsmaatregelen moet Notive implementeren om consistent gevoelige gegevens conform de AVG te verwerken?"
+        "description1": "Voor dit onderzoek is er als eerst een duidelijke onderzoeksvraag vastgesteld op basis van de context van het probleem. Deze vraag richt zich op het zoeken van verschillende manieren om Notive te ondersteunen bij het doel. De onderzoeksvraag is als volgt:",
+        "description2": "'Welke processen, tools en beleidsmaatregelen moet Notive implementeren om consistent gevoelige gegevens conform de AVG te verwerken?'"
       },
       "standpunt": {
         "title": "Standpunt",
-        "description": "Notive moet een duidelijk en transparant privacy- en securitybeleid opstellen en hier in combinatie met externe tools gebruik van maken om consistent gegevens conform de AVG te verwerken."
+        "description1": "Verder wordt er in dit onderzoek uiteindelijk een mening verdedigt door middel van argumenten die zijn vastgesteld op basis van het onderzoek. Het standpunt dat verdedigd wordt is als volgt:",
+        "description2": "Notive moet een duidelijk en transparant privacy- en securitybeleid opstellen en hier in combinatie met externe tools gebruik van maken om consistent gegevens conform de AVG te verwerken."
       }
     },
     "swot": {
-      "title": "Swot analyse",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam blandit imperdiet massa in bibendum. Praesent sit amet feugiat odio. Maecenas nec pharetra ex, vitae sollicitudin sapien. Morbi vitae velit id lectus semper placerat. Donec quis orci non velit mattis elementum vel eu tortor. Nam nec urna ligula. Curabi,",
+      "title": "SWOT-analyse",
+      "description": "De eerste tool die ik heb toegepast is de SWOT analyse. Deze heb ik gebruikt om een duidelijk beeld te vormen van de interne en externe factoren die te maken hebben met het onderwerp en de onderzoeksvraag. Bij een SWOT-analyse zijn de sterktes en zwaktes de interne factoren waar het bedrijf invloed op kan hebben. De kansen en bedreigingen zijn externe factoren waar het bedrijf geen invloed op heeft, maar waar het bedrijf wel rekening mee moet houden.",
       "sterktes": {
         "title": "Sterktes",
         "1": "Diverse kennisvlakken binnen het team. (technische kennis, sales/marketing, UX design, etc.)",
@@ -105,14 +109,12 @@
         }
       }
     },
-
     "onderbouwing": {
       "title": "Onderbouwing",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam blandit imperdiet massa in bibendum. Praesent sit amet feugiat odio. Maecenas nec pharetra ex, vitae sollicitudin sapien. Morbi vitae velit id lectus semper placerat. Donec quis orci non velit mattis elementum vel eu tortor. Nam nec urna ligula. Curabi,",
       "privacyBeleid": {
-        "title": "Privacy beleid",
+        "title": "Privacybeleid",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam blandit imperdiet massa in bibendum. Praesent sit amet feugiat odio. Maecenas nec pharetra ex, vitae sollicitudin sapien. Morbi vitae velit id lectus semper placerat. Donec quis orci non velit mattis elementum vel eu tortor. Nam nec urna ligula. Curabi,",
-
         "1": {
           "title": "AVG regelgeving is streng",
           "text": "lorem"
@@ -172,7 +174,6 @@
       "kennis": {
         "title": "Kennis",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam blandit imperdiet massa in bibendum. Praesent sit amet feugiat odio. Maecenas nec pharetra ex, vitae sollicitudin sapien. Morbi vitae velit id lectus semper placerat. Donec quis orci non velit mattis elementum vel eu tortor. Nam nec urna ligula. Curabi,",
-
         "1": {
           "title": "Er is binnen het gehele team kennis, maar eigenlijk nog te weinig",
           "text": "lorem",

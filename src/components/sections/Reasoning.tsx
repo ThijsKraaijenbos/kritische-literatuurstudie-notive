@@ -1,6 +1,5 @@
 import {Card} from "../Card.tsx";
 import {t} from "../../utils/t.ts";
-import {Divider} from "../Divider.tsx";
 import {forwardRef, type ReactNode, useEffect, useRef} from "react";
 import {BulletPoint} from "../typography/BulletPoint.tsx";
 import gsap from "gsap";
@@ -56,8 +55,8 @@ export const Reasoning = () => {
       {
         opacity: 1,
         y: 0,
-        duration: 1.2,
-        stagger: 0.6,
+        duration: 0.6,
+        stagger: 0.3,
         ease: "back.out(1.5)",
       }
     );
@@ -69,8 +68,8 @@ export const Reasoning = () => {
       {
         opacity: 1,
         x: 0,
-        duration: 0.1,
-        stagger: 0.1,
+        duration: 0.2,
+        stagger: 0.2,
         ease: "back.out(0.2)",
       }
     );
@@ -106,8 +105,6 @@ export const Reasoning = () => {
           </span>
         </span>
       </Argument>
-
-      <Divider />
 
       <Argument ref={card2Ref} textKey="pbd">
         <span className="flex flex-col gap-4">
@@ -154,8 +151,6 @@ export const Reasoning = () => {
         </span>
       </Argument>
 
-      <Divider />
-
       <Argument ref={card3Ref} textKey="kennis">
         <span className="flex flex-col gap-4">
           <BulletPoint ref={setBulletRef(14)}>
@@ -179,8 +174,6 @@ export const Reasoning = () => {
           </BulletPoint>
         </span>
       </Argument>
-
-      <Divider />
     </div>
   );
 };
